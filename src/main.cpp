@@ -79,6 +79,13 @@ void opcontrol() {
 	pros::MotorGroup right_mg({-4,5,-6}); // Creates a motor group with forwards port 4 and reversed ports 4 & 6
 
 	while (true) {
+		Eigen::MatrixXd m = Eigen::MatrixXd::Random(3,3);
+		m = (m + Eigen::MatrixXd::Constant(3,3,1.2)) * 50;
+		std::cout << "m =" << std::endl << m << std::endl;
+		Eigen::VectorXd v(3);
+		v << 1, 2, 3;
+		std::cout << "m * v =" << std::endl << m * v << std::endl;
+
 		pros::lcd::print(0, "%d %d %d", (pros::lcd::read_buttons() & LCD_BTN_LEFT) >> 2,
 		                 (pros::lcd::read_buttons() & LCD_BTN_CENTER) >> 1,
 		                 (pros::lcd::read_buttons() & LCD_BTN_RIGHT) >> 0); // Prints status of the emulated screen LCDs
