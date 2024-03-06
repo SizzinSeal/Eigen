@@ -8,7 +8,7 @@ All credit for Eigen goes to the Eigen team. See their [project page](https://ei
 
 ## Installation
 
-> Note that only PROS is supported due to VEXCode using an ancient compiler
+> Note that only PROS is supported due to VEXCode using an ancient version of C++
 
 1. Download `Eigen@version.zip` from the [latest release](https://github.com/LemLib/Eigen/releases/latest)
 2. Add the zip file to your project
